@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="default" namespace="/" extends="struts-default">
+
+		<action name="login">
+			<result>/login.jsp</result>
+		</action>
+
+		<action name="TimeTest" class="actions.UserLogin" method="testTime">
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="logger" />
+			<interceptor-ref name="timer" />
+			<result name="timertest">/executeTime.jsp</result>
+		</action>
+
+		<action name="TokenTest" class="actions.UserLogin" method="testToken">
+			<interceptor-ref name="defaultStack" />
+			<interceptor-ref name="token" />
+			<result name="invalid.token">/morePost.jsp </result>
+			<result name="tokenTest">/success.jsp</result>
+		</action>		
+	</package>
+</struts>    

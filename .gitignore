@@ -1,0 +1,10 @@
+*.class
+*.jar
+*.index
+*.dat
+.metadata
+.mymetadata
+.settings
+bin
+*.bin
+classes

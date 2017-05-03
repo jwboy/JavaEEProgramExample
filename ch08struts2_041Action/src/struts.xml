@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="jwstrust" extends="struts-default">
+		<action name="HelloWorld" class="HelloWorld">
+			<result>/HelloWorld.jsp</result>
+		</action>
+		<action name="StudentInforCollector001">
+			<result>/student/studentInforCollector001.jsp </result>
+		</action>
+		<action name="StudentInforShow001" class="actions.StudentInforAction">
+			<result name="success">/student/studentInforShow001.jsp</result>
+		</action>
+	</package>
+
+
+	<package name="root" namespace="/" extends="struts-default">
+		<action name="WelcomeRegister01">    <!--第1个Action -->
+			<result>/student/studentRegister.jsp</result>
+		</action>
+		<action name="StudentRegInforShow02" class="actions.StudentRegisterAction"> <!--第2个Action -->
+			<result name="success">/student/studentRegInforShow.jsp</result>
+			<result name="input">/student/studentRegister.jsp</result>
+		</action>
+	</package>
+
+	<package name="default" extends="struts-default">
+		<action name="WelcomeRegister03">    <!--第3个Action -->
+			<result>/student/studentRegister.jsp</result>
+		</action>
+	</package>
+
+	<package name="modePack" namespace="/show" extends="struts-default">
+		<action name="StudentInforShow04" class="actions.StudentRegisterModelDriverAction"
+			method="oneNewRegister">    <!--第5个Action -->
+			<result name="input">/student/remind.jsp</result>
+			<result name="success">/student/studentRegInforShow.jsp</result>
+		</action>
+	</package>
+
+</struts>    

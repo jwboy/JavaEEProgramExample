@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="myweb20150408">
+    <property environment="env"/>
+    <property name="ECLIPSE_HOME" value="../../../AppData/Local/Genuitec/MyEclipse 8.5"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.5"/>
+    <property name="source" value="1.5"/>
+    <path id="Persisted container [melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER for project [myweb20121012]].libraryclasspath">
+        <pathelement location="../../../AppData/Local/Genuitec/Common/plugins/com.genuitec.eclipse.j2eedt.core_8.5.0.me201003231033/data/libraryset/EE_5/javaee.jar"/>
+        <pathelement location="../../../AppData/Local/Genuitec/Common/plugins/com.genuitec.eclipse.j2eedt.core_8.5.0.me201003231033/data/libraryset/EE_5/jsf-impl.jar"/>
+        <pathelement location="../../../AppData/Local/Genuitec/Common/plugins/com.genuitec.eclipse.j2eedt.core_8.5.0.me201003231033/data/libraryset/EE_5/jsf-api.jar"/>
+        <pathelement location="../../../AppData/Local/Genuitec/Common/plugins/com.genuitec.eclipse.j2eedt.core_8.5.0.me201003231033/data/libraryset/EE_5/jstl-1.2.jar"/>
+    </path>
+    <path id="myweb20150408.classpath">
+        <pathelement location="WebRoot/WEB-INF/classes"/>
+        <path refid="Persisted container [melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER for project [myweb20121012]].libraryclasspath"/>
+        <pathelement location="E:/Platforms/jboss-6.0.0.Final/client/mysql/mysql-connector-java-5.1.22-bin.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="WebRoot/WEB-INF/classes"/>
+        <copy includeemptydirs="false" todir="WebRoot/WEB-INF/classes">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="WebRoot/WEB-INF/classes"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="WebRoot/WEB-INF/classes" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="myweb20150408.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+</project>

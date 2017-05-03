@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="50,50" size="170,171">
+    <action name="StudentInfor" location="10,20" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentInforCollector.jsp" />
+      </result>
+    </action>
+    <action name="StudentInforShow" location="10,120" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentInforShow.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="studentInforCollector.jsp" path="/studentInforCollector.jsp" location="350,50" size="150,55" />
+  <webResource name="studentInforShow.jsp" path="/studentInforShow.jsp" location="420,254" size="150,55" />
+</Struts2Diagram>
+

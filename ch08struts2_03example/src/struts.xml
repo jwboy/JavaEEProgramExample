@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default"> <!--配置包-->
+		<action name="StudentInfor">  <!--定义action名字-->
+			<result>/studentInforCollector.jsp</result> <!--配置视图-->
+		</action>
+
+		<action name="StudentInforShow" class = "actions.StudentInforAction"><!--配置action名字以及该action所对应的实现java类-->
+			<result>/studentInforShow.jsp</result>
+		</action>
+	</package>
+</struts>    

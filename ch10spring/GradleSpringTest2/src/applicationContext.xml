@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+	<!-- 定义第一个Bean，注入Chinese类对象 -->
+	<bean id="chinese" class="Chinese">
+		<!--使用设置注入: property元素用来指定需要容器注入的属性，lan属性需要容器注入
+			ref就指向lan注入的id -->
+		<property name="lan" ref="english"></property>	
+	    <!-- 使用构造注入，为Chinese实例注入Language实例 -->
+		<constructor-arg ref="english"></constructor-arg>
+	</bean>	
+	<!-- 注入English -->
+	<bean id="english" class="English"></bean>
+</beans>
+
+

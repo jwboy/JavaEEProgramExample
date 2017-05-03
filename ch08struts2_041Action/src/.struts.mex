@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="root" location="50,200" size="170,192">
+    <action name="WelcomeRegister" location="10,20" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentRegister.jsp" />
+      </result>
+    </action>
+    <action name="StudentInforShow" location="10,120" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentInforShow.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="studentRegister.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="default" location="50,50" size="170,71">
+    <action name="WelcomeRegister" location="10,20" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentRegister.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="modePack" location="350,200" size="170,92">
+    <action name="StudentInforShow" location="10,20" size="150,62">
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="remind.jsp" />
+      </result>
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentInforShow.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="studentRegister.jsp" path="/student/studentRegister.jsp" location="350,50" size="150,55" />
+  <webResource name="studentInforShow.jsp" path="/student/studentInforShow.jsp" location="50,350" size="150,55" />
+  <webResource name="remind.jsp" path="/student/remind.jsp" location="350,350" size="150,55" />
+</Struts2Diagram>
+

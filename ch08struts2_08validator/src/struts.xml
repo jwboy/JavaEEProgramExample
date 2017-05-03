@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="WelcomeRegister">
+			<result>/studentRegister.jsp</result>
+		</action>
+
+		<action name="Register" class="actions.StudentRegisterAction">
+			<result name="success">/success.jsp</result>
+			<result name="input">/studentRegister.jsp</result>
+		</action>
+		<action name="WelcomeVisitorRegister">
+			<result>/visitor/studentVisitorRegister.jsp</result>
+		</action>
+
+		<action name="VisitorRegister" class="actions.VisitorRegisterAction">
+			<result name="success">/success.jsp</result>
+			<result name="input">/visitor/studentVisitorRegister.jsp</result>
+		</action>
+
+
+		<action name="WelcomeMyVisitorRegister">
+			<result>/visitor/studentMyVisitorRegister.jsp</result>
+		</action>
+
+		<action name="MyVisitorRegister" class="actions.MyValidatorAction">
+			<result name="success">/success.jsp</result>
+			<result name="input">/visitor/studentMyVisitorRegister.jsp</result>
+		</action>
+
+
+	</package>
+</struts>    

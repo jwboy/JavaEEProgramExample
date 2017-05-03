@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="0,0" size="0,0">
+    <action name="scores" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="scores.jsp" />
+      </result>
+    </action>
+    <action name="showscores" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="showScores.jsp" />
+      </result>
+    </action>
+    <action name="cellphone" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="cellPhone.jsp" />
+      </result>
+    </action>
+    <action name="showscellphone" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="showCellPhone.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="scores.jsp" path="/scores.jsp" location="0,0" size="0,0" />
+  <webResource name="showScores.jsp" path="/showScores.jsp" location="0,0" size="0,0" />
+  <webResource name="cellPhone.jsp" path="/cellPhone.jsp" location="0,0" size="0,0" />
+  <webResource name="showCellPhone.jsp" path="/showCellPhone.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

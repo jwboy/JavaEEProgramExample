@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="50,50" size="170,592">
+    <action name="WelcomeRegister" location="10,20" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentRegister.jsp" />
+      </result>
+    </action>
+    <action name="Register" location="10,120" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="studentRegister.jsp" />
+      </result>
+    </action>
+    <action name="WelcomeVisitorRegister" location="10,220" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentVisitorRegister.jsp" />
+      </result>
+    </action>
+    <action name="VisitorRegister" location="10,320" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="studentVisitorRegister.jsp" />
+      </result>
+    </action>
+    <action name="WelcomeMyVisitorRegister" location="10,420" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="studentMyVisitorRegister.jsp" />
+      </result>
+    </action>
+    <action name="MyVisitorRegister" location="10,520" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="success.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="studentMyVisitorRegister.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="studentRegister.jsp" path="/studentRegister.jsp" location="350,50" size="150,55" />
+  <webResource name="success.jsp" path="/success.jsp" location="500,50" size="150,55" />
+  <webResource name="studentVisitorRegister.jsp" path="/visitor/studentVisitorRegister.jsp" location="50,200" size="150,55" />
+  <webResource name="studentMyVisitorRegister.jsp" path="/visitor/studentMyVisitorRegister.jsp" location="350,200" size="150,55" />
+</Struts2Diagram>
+
